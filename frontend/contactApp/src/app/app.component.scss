@@ -1,0 +1,69 @@
+main.wrapper {
+  max-width: 1200px;
+  padding:1rem;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  gap:1rem;
+  margin-bottom:2rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap:.5rem;
+  }
+  .menu,
+  .registration {
+    display: flex;
+    gap:1rem;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap:.5rem;
+    }
+  }
+
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  @media (max-width: 768px) {
+    margin:0 !important;
+  }
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.nav .menu .home-btn {
+  margin-right: 10px;
+  background-color: #28a745;
+}
+
+.nav .menu button {
+  margin: 5px;
+}
+
+.nav .registration button {
+  margin: 5px;
+}
+
+.registration button {
+  background-color: #17a2b8;
+}
+
+.registration button:hover {
+  background-color: #138496;
+}

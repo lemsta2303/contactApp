@@ -1,0 +1,12 @@
+.home-btn {
+  margin-bottom: 3rem;
+}
+
+.contact-info {
+display: flex;
+  flex-direction: column;
+  gap:.5rem;
+  .name {
+    font-size:30px;
+  }
+}

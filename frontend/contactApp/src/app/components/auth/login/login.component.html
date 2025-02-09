@@ -1,0 +1,21 @@
+@if(!authService.isAuthenticated()) {
+  <div class="login-container">
+    <h2>Logowanie</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="field-container">
+        <label for="username">Nazwa użytkownika</label>
+        <input id="username" formControlName="username" type="text" />
+      </div>
+      <div class="field-container">
+        <label for="password">Hasło</label>
+        <input id="password" formControlName="password" type="password" />
+      </div>
+      <button type="submit">Zaloguj się</button>
+    </form>
+    @if(message) {
+      <p>{{ message }}</p>
+    }
+  </div>
+}@else {
+ <p class="info">Użytownik zalogowany!</p>
+}

@@ -1,0 +1,51 @@
+@if(authService.isAuthenticated()) {
+  <div class="contact-form-container">
+    <h2>{{ isEditingMode ? 'Edytuj kontakt' : 'Dodaj kontakt' }}</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="field">
+        <label for="firsName">Imię</label>
+        <input id="firsName" formControlName="firsName" type="text" />
+      </div>
+      <div class="field">
+        <label for="lastName">Nazwisko</label>
+        <input id="lastName" formControlName="lastName" type="text" />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" type="email" />
+      </div>
+      <div class="field">
+        <label for="password">Hasło</label>
+        <input id="password" formControlName="password" type="password" />
+      </div>
+      <div class="field">
+        <label for="category">Kategoria</label>
+        <select id="category" formControlName="category">
+          <option [ngValue]="1">Służbowy</option>
+          <option [ngValue]="2">Prywatny</option>
+          <option [ngValue]="3">Inny</option>
+        </select>
+
+      </div>
+      @if(contactForm.get('category')?.value !== 2) {
+        <div class="field">
+          <label for="subCategory">Podkategoria</label>
+          <input id="subCategory" formControlName="subCategory" type="text" />
+        </div>
+      }
+
+      <div class="field">
+        <label for="phoneNumber">Numer telefonu</label>
+        <input id="phoneNumber" formControlName="phoneNumber" type="text" />
+      </div>
+      <div class="field">
+        <label for="birthDate">Data urodzenia</label>
+        <input id="birthDate" formControlName="birthDate" type="date" />
+      </div>
+      <button type="submit">{{ isEditingMode ? 'Zaktualizuj kontakt' : 'Dodaj kontakt' }}</button>
+    </form>
+  </div>
+} @else {
+  <p>tylko dla zalogowanych!</p>
+}
+

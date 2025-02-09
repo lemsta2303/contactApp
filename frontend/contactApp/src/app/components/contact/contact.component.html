@@ -1,0 +1,13 @@
+
+
+<div class="contact-info">
+  <h4 class="name">{{contact?.firsName + " " + contact?.lastName}}</h4>
+  <p class="email">Mail: {{ contact?.email }}</p>
+  <p class="phone-number">Telefon: {{contact?.phoneNumber}}</p>
+  <p class="birth-date">Data urodzenia: {{ contact?.birthDate | date:'dd-MM-yyyy' }}</p>
+  <p class="password">Hasło: {{contact?.password}}</p>
+  <p class="category">Kategoria: {{category}}</p>
+  @if(contact?.subCategory !== "") {
+    <p class="subcategory">Podkategoria: {{contact?.subCategory}}</p>
+  }
+</div>

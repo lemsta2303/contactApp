@@ -1,0 +1,88 @@
+.contacts-list {
+  list-style: none;
+  margin: 0;
+  max-width:50%;
+  @media (max-width: 1025px) {
+    max-width:100%;
+  }
+
+  .contact-list__contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease;
+    .information {
+      display: flex;
+      flex-direction: column;
+      gap:.5rem;
+    }
+    .buttons {
+      display: flex;
+      gap:.1rem;
+    }
+  }
+  .contact-list__name {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+
+    h4 {
+      margin: 0;
+      color: #000;
+    }
+  }
+  .contact-list__number {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+  }
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.delete-button:active {
+  transform: scale(0.98);
+}
+
+.update-button {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.update-button:hover {
+  background-color: #e0a800;
+}
+
+.update-button:active {
+  transform: scale(0.98);
+}
+
+.buttons button {
+  margin-right: 8px;
+}
+
+.buttons button:last-child {
+  margin-right: 0;
+}

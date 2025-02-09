@@ -1,0 +1,19 @@
+<div class="register-container">
+  <h2>Rejestracja</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+     <div class="field-container">
+      <label for="username">Nazwa użytkownika</label>
+      <input id="username" formControlName="username" type="text" />
+    </div>
+    <div class="field-container">
+      <label for="password">Hasło</label>
+      <input id="password" formControlName="password" type="password" />
+    </div>
+    <button type="submit">Zarejestruj się</button>
+  </form>
+
+  @if(message) {
+    <p >{{ message }}</p>
+  }
+
+</div>

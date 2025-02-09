@@ -1,0 +1,6 @@
+@contactApp_HostAddress = http://localhost:5296
+
+GET {{contactApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

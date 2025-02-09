@@ -1,0 +1,24 @@
+
+<main class="wrapper">
+  <div class="nav">
+    <div class="menu">
+      <button routerLink="/" class="home-btn">Home</button>
+      @if(authService.isAuthenticated()) {
+        <button routerLink="add">Add new contact</button>
+      }
+    </div>
+
+
+    <div class="registration">
+      @if(authService.isAuthenticated()) {
+        <button (click)="authService.logout()">Logout</button>
+      } @else {
+        <button routerLink="/login">Login</button>
+        <button routerLink="/register">Register</button>
+      }
+    </div>
+
+  </div>
+  <router-outlet></router-outlet>
+</main>
+

@@ -1,0 +1,25 @@
+@if (contacts.length !== 0) {
+  <ul class="contacts-list">
+    @for(contact of contacts; track contact.phoneNumber) {
+      <li class="contact-list__contact" >
+        <div class="information">
+          <div class="contact-list__name">
+            <a [routerLink]="['/contact', contact.id]" >
+              <h4>{{contact.firstName + " " + contact.lastName}}</h4>
+            </a>
+          </div>
+          <h5 class="contact-list__number">
+            {{contact.phoneNumber}}
+          </h5>
+        </div>
+        @if(authService.isAuthenticated()) {
+          <div class="buttons">
+            <button class="delete-button" (click)="deleteContact(contact.id)">Delete</button>
+            <button class="update-button" [routerLink]="['/edit', contact.id]">Update</button>
+          </div>
+        }
+
+      </li>
+    }
+  </ul>
+}
