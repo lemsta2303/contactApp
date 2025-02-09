@@ -29,7 +29,7 @@ Before starting, ensure that you have the following tools installed on your mach
 ### **1. Clone the Repository**
 If the project is in a Git repository, clone it to your local machine:
 ```bash
-git clone <repository_url>
+git clone https://github.com/lemsta2303/contactApp.git
 cd <repository_folder>
 ```
 
